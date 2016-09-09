@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="InsImageViewModel"
+            type="com.example.oleg.simpleinstagram.viewmodel.InsImageViewModel"/>
+    </data>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_width"
+        android:paddingLeft="@dimen/list_left_padding"
+        android:paddingRight="@dimen/list_left_padding"
+        android:paddingTop="@dimen/list_item_top_padding"
+        android:elevation="@dimen/item_elevation"
+        android:id="@+id/root_item_layout"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="@dimen/list_image_width"
+                android:layout_height="fill_parent"
+                bind:imageUrl="@{InsImageViewModel.tumbnail}"
+                bind:error="@{@drawable/like_icon}"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/check_image_view"
+                android:layout_centerInParent="true"
+                imageResource="@{InsImageViewModel.isChecked}"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@{InsImageViewModel.createdTime}"
+                android:id="@+id/createdDate"
+                android:textSize="@dimen/item_date_text_size"
+                android:layout_marginTop="@dimen/list_date_top_padding"
+                android:layout_marginLeft="@dimen/list_item_left_padding" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@{InsImageViewModel.caption}"
+                android:id="@+id/ImageCaption"
+                android:layout_marginLeft="@dimen/list_item_left_padding"
+                android:layout_marginTop="@dimen/list_date_height" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="@dimen/item_like_count_text_bottom"
+            android:gravity="right"
+            android:text="likes">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/likes_count"
+                android:textSize="@dimen/item_like_count_text_size"
+                android:text="@{InsImageViewModel.likesCount}"
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/likeImage"
+                android:src="@mipmap/like_icon" />
+
+        </LinearLayout>
+
+    </LinearLayout></layout>

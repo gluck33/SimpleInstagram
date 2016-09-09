@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Simple Instagram</string>
+    <string name="find_user_button_text">Найти</string>
+    <string name="load_images_begin_message">Получение картинок</string>
+    <string name="message_failure_request_photos">Ошибка загрузки картинок</string>
+    <string name="message_end_request_photos">Фото получены</string>
+    <string name="progress_dialog_message_create_collage">Создание коллажа</string>
+    <string name="toast_message_failure_writing_to_file">Ошибка записи в файл</string>
+    <string name="toast_message_failure_small_amount_of_picture">Неудача, маленькое количество картинок</string>
+    <string name="toast_message_failure_create_collage">Ошибка создания коллажа</string>
+    <string name="send_button_text">Расшарить в ВК</string>
+    <string name="from">из</string>
+    <string name="send_to">Share image to</string>
+    <string name="package_vkontakte_not_found">Официальное приложение Вконтакте не установлено в вашей системе.</string>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Simple Instagram</string>
+    <string name="find_user_button_text">Find</string>
+    <string name="load_images_begin_message">Request photos</string>
+    <string name="message_failure_request_photos">Failure to request photos</string>
+    <string name="message_end_request_photos">End request photos</string>
+    <string name="progress_dialog_message_create_collage">Creating collage</string>
+    <string name="toast_message_failure_writing_to_file">Failure writing to file</string>
+    <string name="toast_message_failure_small_amount_of_picture">Failure small amount of picture</string>
+    <string name="toast_message_failure_create_collage">Failure create collage</string>
+    <string name="send_button_text">Share to VK</string>
+    <string name="send_to">Share image to</string>
+    <string name="package_vkontakte_not_found">Package VK not found in your system</string>
+</resources>
